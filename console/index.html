@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fachreferat - Console</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timer.jquery/0.9.0/timer.jquery.min.js" integrity="sha512-DeNeekCILcrzL1FtTl+zjBD6z2nGucwdZJeZOXtoS9hfL3azWLzqfDgll61D6jO/EhM9gx4PokARMUfgrwiQfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="vh-100 bg-light">
+        <div class="p-5 w-100 h-100">
+            <div class="row h-100">
+                <div class="col-8">
+                    <iframe src="../demo/index.html" width="100%" height="100%" frameborder="0"
+                        class="shadow border"></iframe>
+                </div>
+                <div class="col-4 overflow-auto bg-white shadow border">
+                    <h3 class="mt-2 font-weight-light">Analytics - Prototype Console
+                    </h3>
+                    <h5>
+                        <button type="button" class="p-0 btn btn-link">Reset</button>
+                    </h5>
+                    <h5 class="mt-2 font-muted font-weight-light">Output:
+                    </h5>
+                    <div class="h-100 w-100">
+                        <div class="row w-100 p-3">
+                            <div class="col-7 text-monospace">
+                                <div class="row w-70">Neuer Besucher:</div>
+                                <div class="row w-70">Bekannter Besucher:</div>
+                                <div class="row w-70">Ip-Adresse:</div>
+                                <div class="row w-70">Besuchszeit:</div>
+                                <div class="row w-70">Provider:</div>
+                                <div class="row w-70">Kontinent:</div>
+                                <div class="row w-70">Land:</div>
+                                <div class="row w-70">Stadt:</div>
+                                <div class="row w-70">Postleitzahl:</div>
+                                <div class="row w-70">Region:</div>
+                                <div class="row w-70">Gerät:</div>
+                                <div class="row w-70">Maus-X:</div>
+                                <div class="row w-70">Maus-Y:</div>
+                                <div class="row w-70">Scroll Position:</div>
+                            </div>
+                            <div class="col-5">
+                                <div id="display_newvisitor" class="row w-100"></div>
+                                <div id="display_returningvisitor" class="row w-100"></div>
+                                <div id="display_ip" class="row w-100"></div>
+                                <div id="display_usertimer" class="row w-100"></div>
+                                <div id="display_carrier" class="row w-100"></div>
+                                <div id="display_continent_name" class="row w-100"></div>
+                                <div id="display_country_name" class="row w-100"></div>
+                                <div id="display_city" class="row w-100"></div>
+                                <div id="display_postal" class="row w-100"></div>
+                                <div id="display_region" class="row w-100"></div>
+                                <div class="row w-100">Desktop</div>
+                                <div id="display_mousex" class="row w-100">0</div>
+                                <div id="display_mousey" class="row w-100">0</div>
+                                <div id="display_scroll" class="row w-100">0</div>
+                            </div>
+                        </div>
+                        <div id="log" class="text-monospace"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./code/console.js"></script>
+
+<script>
+      $(document).ready(function(){//code
+        $("#display_usertimer").timer();
+    });
+    </script>
+</html>
